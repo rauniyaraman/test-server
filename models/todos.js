@@ -19,6 +19,11 @@ const todosSchema = new mongoose.Schema(
       type: Boolean, 
       default: false 
     },
+    user: { // Reference to the User model
+      type: mongoose.Schema.Types.ObjectId, // Store the user's ObjectId
+      ref: 'User', // Reference the User model
+      required: true // Each todo must be linked to a user
+    }
   },
   { timestamps: true }
 );
