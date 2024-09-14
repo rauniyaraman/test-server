@@ -3,7 +3,8 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 
 // userController.createUser k ho jasto laagyo bane yetii bujnu ki userController maa chai euta createUser naam ko function xa. createUser lai haami method ni  bhanna sakxam jun haamile afai le banako ho 
-router.post('/', userController.createUser);
+router.post('/signup', userController.createUser);
+router.post('/login', userController.login);
 
 module.exports = router;
 

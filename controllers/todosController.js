@@ -1,4 +1,4 @@
-const Todos = require('../models/todos');
+const Todos = require('../models/Todos');
 
 // Create a new user
 
@@ -21,7 +21,8 @@ console.log("request ko body maa k xa --->", req.body)
   const todos = new Todos({
     title: req.body.title,
     description: req.body.description,
-    completed: req.body.completed
+    completed: req.body.completed,
+    userId: req.body.user 
   });
   
 
